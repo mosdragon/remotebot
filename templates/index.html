@@ -1,0 +1,48 @@
+<html>
+
+  <head></head>
+
+  <body>
+    <form action="/forward" method="post">
+      <button name="Forward" value="forward">Forward</button>
+    </form>
+
+    <form action="/left" method="post">
+      <button name="Left" value="left">Left</button>
+    </form>
+
+    <form action="/right" method="post">
+      <button name="Right" value="right">Right</button>
+    </form>
+
+    <form action="/reverse" method="post">
+      <button name="Backward" value="backward">Backward</button>
+    </form>
+
+    <form action="/stop" method="post">
+      <button name="Stop" value="stop">Stop</button>
+    </form>
+  </body>
+  
+
+  <script src="/jquery.js" />
+<script>
+var forward = function() {
+$.post("/forward", function() {
+console.log("forward finished");
+alert("finished");
+});
+
+var stop = $.post("/stop", function() {
+console.log("stop finished");
+alert("finished");
+});
+
+
+
+}
+
+
+</script>
+
+<html>
